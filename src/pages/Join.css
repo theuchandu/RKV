@@ -1,0 +1,254 @@
+.join-page {
+  width: 100%;
+}
+
+.page-hero {
+  padding: 10rem 2rem 6rem;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  text-align: center;
+  color: #fff;
+}
+
+.page-hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  letter-spacing: -2px;
+}
+
+.page-hero-subtitle {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.join-content {
+  padding: 6rem 2rem;
+  background: #000;
+  color: #fff;
+}
+
+.join-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.join-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem;
+}
+
+.join-intro h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -1px;
+}
+
+.join-intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.benefits-section {
+  margin-bottom: 5rem;
+}
+
+.benefits-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 3rem 0;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px);
+}
+
+.benefit-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #550277;
+}
+
+.benefit-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.positions-section {
+  margin-bottom: 5rem;
+}
+
+.positions-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 3rem 0;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.positions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.position-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.position-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.position-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.position-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+}
+
+.position-type {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
+
+.position-details {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+.position-department,
+.position-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.apply-button {
+  display: inline-block;
+  color: #550277;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.apply-button:hover {
+  color: #550277;
+}
+
+.contact-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0 0 2rem 0;
+}
+
+.contact-button {
+  display: inline-block;
+  background: #550277;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #e0c4eb;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(71, 4, 84, 0.3);
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 8rem 1rem 4rem;
+  }
+
+  .page-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .join-content {
+    padding: 4rem 1rem;
+  }
+
+  .join-intro h2,
+  .benefits-section h2,
+  .positions-section h2 {
+    font-size: 2rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .position-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .position-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+

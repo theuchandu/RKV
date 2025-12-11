@@ -1,0 +1,64 @@
+/* Page background */
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+/* Card Container */
+.contact-card {
+  background: #ffffff;
+  padding: 30px;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.contact-card h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Input Fields */
+.contact-card input,
+.contact-card textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+  border-color: #4a6cf7;
+  box-shadow: 0 0 4px rgba(74, 108, 247, 0.3);
+}
+
+/* Submit Button */
+.contact-card button {
+  width: 100%;
+  padding: 12px;
+  background: #4a6cf7;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.contact-card button:hover {
+  background: #3b54c6;
+}
