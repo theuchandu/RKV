@@ -9,7 +9,7 @@
   background: transparent !important;
   background-image: none !important;
   text-align: center;
-  color: #fff;
+  color: #a105de;
 }
 
 .page-hero-content h1 {
@@ -17,6 +17,7 @@
   font-weight: 700;
   margin: 0 0 1rem 0;
   letter-spacing: -2px;
+  color: #a105de;
 }
 
 .page-hero-subtitle {
@@ -47,6 +48,7 @@
   font-weight: 700;
   margin: 0 0 1.5rem 0;
   letter-spacing: -1px;
+  color:#a105de;
 }
 
 .team-intro p {

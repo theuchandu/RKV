@@ -1,49 +1,57 @@
 import { useState, useEffect } from 'react';
 import './Hero.css';
-// import hero1 from '../assets/hero_1.mp4';
+import heroimg1 from '../assets/hero_1img.jpg';
+import heroimg2 from '../assets/hero_2img.jpg';
+import heroimg3 from '../assets/hero_3img.jpg';
 
 const Hero = () => {
   const projects = [
     {
       id: 1,
-      title: 'Troll 2',
-      subtitle: 'A new troll has awakened!',
+      title: 'Visual Development',
+      // subtitle: 'A new troll has awakened!',
       // cta: 'Watch the trailer',
-     image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=2000&q=80&auto=format&fit=crop',
+      // image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=2000&q=80&auto=format&fit=crop',
+      image: heroimg1,
     },
     {
       id: 2,
-      title: 'Néro The Assassin',
-      subtitle: 'France, 1504.',
+      title: 'Stage Craft',
+      // subtitle: 'France, 1504.',
       // cta: 'Learn More',
-        image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=2000&q=80&auto=format&fit=crop'
+        // image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=2000&q=80&auto=format&fit=crop'
+        image: heroimg2,
 
     },
     {
       id: 3,
-      title: 'Cold Storage',
-      subtitle: "If it spreads, you're dead.",
-      image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=2000&q=80&auto=format&fit=crop'
+      title: 'Visual Effect',
+      // subtitle: "If it spreads, you're dead.",
+      // image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=2000&q=80&auto=format&fit=crop'
+      image: heroimg3,
     },
     {
       id: 4,
-      title: 'The Walking Dead: Daryl Dixon',
-      subtitle: 'On AMC & AMC+',
-      image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=2000&q=80&auto=format&fit=crop'
+      title: 'Feature Animation',
+      // subtitle: 'On AMC & AMC+',
+      // image: 'https://www.freepik.com/free-photo/doomsday-scene-catastrophe-digital-illustration_14541101.htm#fromView=search&page=1&position=12&uuid=bf58e4f5-533a-4248-a220-62f97acefae9&query=vfx+breakdown',
+      image:heroimg2,
     },
     {
       id: 5,
-      title: 'Dracula: A Love Tale',
-      subtitle: 'In cinemas on July 30',
+      title: 'Immersive Experiences',
+      // subtitle: 'In cinemas on July 30',
       // cta: 'Watch the trailer',
-      image: 'https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?w=2000&q=80&auto=format&fit=crop'
+      // image: 'https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?w=2000&q=80&auto=format&fit=crop'
+      image: heroimg1,
     },
     {
       id: 6,
       title: 'Emilia Pérez',
-      subtitle: 'Mexico, today. Lawyer Rita receives an unexpected offer.',
+      // subtitle: 'Mexico, today. Lawyer Rita receives an unexpected offer.',
       // cta: 'Learn more',
-      image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=2000&q=80&auto=format&fit=crop'
+      // image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=2000&q=80&auto=format&fit=crop'
+      image: heroimg3,
     }
   ];
 
