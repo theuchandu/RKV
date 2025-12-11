@@ -25,7 +25,7 @@ function App() {
         {/* <NewsSection /> */}
 
         <JoinSection />
-        <ContactSection />
+        {/* <ContactSection /> */}
       </Layout>
     </div>
   );

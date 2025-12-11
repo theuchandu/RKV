@@ -86,13 +86,13 @@ const Header = () => {
           >
             About
           </a>
-          <a 
+          {/* <a 
             href="#Conatctus" 
             className={isActive('Conatctus') ? 'active' : ''}
             onClick={(e) => handleNavClick(e, 'Conatctus')}
           >
             Conatct us
-          </a>
+          </a> */}
           {/* <a 
             href="#news" 
             className={isActive('news') ? 'active' : ''}
