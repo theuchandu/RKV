@@ -8,6 +8,7 @@ import ShowreelsSection from './pages/Showreels';
 import TeamSection from './pages/Team';
 import NewsSection from './pages/News';
 import JoinSection from './pages/Join';
+import ContactSection from './pages/Conatctus';
 import './App.css';
 
 function App() {
@@ -22,7 +23,9 @@ function App() {
         <TeamSection />
         <AboutSection />
         {/* <NewsSection /> */}
+
         <JoinSection />
+        <ContactSection />
       </Layout>
     </div>
   );

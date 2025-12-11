@@ -17,8 +17,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-content">
-          <div className="footer-section">
+        {/* <div className="footer-content"> */}
+          {/* <div className="footer-section">
             <h3>LET'S GET SOCIAL</h3>
             <div className="social-links">
               <a href="#" aria-label="Facebook">Facebook</a>
@@ -27,8 +27,8 @@ const Footer = () => {
               <a href="#" aria-label="LinkedIn">LinkedIn</a>
               <a href="#" aria-label="YouTube">YouTube</a>
             </div>
-          </div>
-          <div className="footer-section">
+          </div> */}
+          {/* <div className="footer-section">
             <h3>Discover our VFX demos and our creative worlds</h3>
             <p>Discover our VFX demos to learn more about our studio and explore the projects crafted by our artists across film & series.</p>
             <a 
@@ -38,8 +38,8 @@ const Footer = () => {
             >
               Discover here →
             </a>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
         <div className="footer-nav">
           <div className="footer-nav-column">
             <h4>Work</h4>
