@@ -1,0 +1,14 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#ffffff"/>
+  
+  <!-- RKV Logo - Simplified geometric design -->
+  <!-- R shape -->
+  <path d="M 25 60 L 25 140 L 60 140 Q 75 140 75 125 Q 75 110 60 110 L 50 110 L 50 60 Z M 50 85 L 60 85 Q 70 85 70 95 Q 70 105 60 105 L 50 105 Z" fill="#5a0a7f" stroke="none"/>
+  
+  <!-- K shape -->
+  <path d="M 85 60 L 85 140 L 100 140 L 100 95 L 130 140 L 150 140 L 115 95 L 150 60 L 130 60 L 100 95 L 100 60 Z" fill="#5a0a7f" stroke="none"/>
+  
+  <!-- V shape -->
+  <polygon points="160,60 175,60 190,140 175,140 170,100 155,100 150,140 135,140" fill="#5a0a7f" stroke="none"/>
+</svg>
