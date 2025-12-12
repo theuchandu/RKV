@@ -1,4 +1,5 @@
 import './Team.css';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const Team = () => {
   const teamMembers = [
@@ -54,18 +55,25 @@ const Team = () => {
           </div>
 
           <div className="team-grid">
-            {teamMembers.map((member) => (
-              <div key={member.id} className="team-member-card">
-                <div className="member-image">
-                  <img src={member.image} alt={member.name} />
+            {teamMembers.map((member, idx) => {
+              const { ref, isVisible } = useScrollReveal();
+              return (
+                <div
+                  key={member.id}
+                  ref={ref}
+                  className={`team-member-card ${isVisible ? 'animate-reveal' : ''} stagger-${(idx % 6) + 1}`}
+                >
+                  <div className="member-image">
+                    <img src={member.image} alt={member.name} />
+                  </div>
+                  <div className="member-info">
+                    <h3>{member.name}</h3>
+                    <p className="member-role">{member.role}</p>
+                    <p className="member-bio">{member.bio}</p>
+                  </div>
                 </div>
-                <div className="member-info">
-                  <h3>{member.name}</h3>
-                  <p className="member-role">{member.role}</p>
-                  <p className="member-bio">{member.bio}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import './Capabilities.css';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const Capabilities = () => {
 
@@ -41,8 +42,14 @@ const Capabilities = () => {
       <section className="capabilities-categories">
         <div className="capabilities-container">
           <div className="capabilities-categories-grid">
-            {categories.map((cat) => (
-              <div key={cat.id} className="capabilities-cat-card">
+            {categories.map((cat, idx) => {
+              const { ref, isVisible } = useScrollReveal();
+              return (
+                <div
+                  key={cat.id}
+                  ref={ref}
+                  className={`capabilities-cat-card ${isVisible ? 'animate-reveal' : ''} ${idx % 2 === 0 ? 'stagger-1' : 'stagger-2'}`}
+                >
                   <div className="capabilities-cat-image">
                     {typeof cat.image === 'string' && cat.image.endsWith('.mp4') ? (
                       <video src={cat.image} muted loop playsInline autoPlay />
@@ -51,9 +58,10 @@ const Capabilities = () => {
                     )}
                     <div className="capabilities-cat-overlay" />
                   </div>
-                <div className="capabilities-cat-title">{cat.title}</div>
-              </div>
-            ))}
+                  <div className="capabilities-cat-title">{cat.title}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>  

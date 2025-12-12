@@ -23,7 +23,6 @@ const Join = () => {
       location: 'Paris, France',
       type: 'Full-time'
     },
-    
   ];
 
   return (
@@ -49,19 +48,19 @@ const Join = () => {
           <div className="benefits-section">
             <h2>What We Offer</h2>
             <div className="benefits-grid">
-              <div className="benefit-item">
+              <div className="benefit-item animate-reveal stagger-1">
                 <h3>Creative Freedom</h3>
                 <p>Work on exciting projects with creative autonomy and artistic expression.</p>
               </div>
-              <div className="benefit-item">
+              <div className="benefit-item animate-reveal stagger-2">
                 <h3>World-Class Projects</h3>
                 <p>Collaborate on award-winning films and television series.</p>
               </div>
-              <div className="benefit-item">
+              <div className="benefit-item animate-reveal stagger-3">
                 <h3>Professional Growth</h3>
                 <p>Continuous learning opportunities and career development programs.</p>
               </div>
-              <div className="benefit-item">
+              <div className="benefit-item animate-reveal stagger-4">
                 <h3>Collaborative Environment</h3>
                 <p>Work alongside talented artists and industry professionals.</p>
               </div>
@@ -71,8 +70,8 @@ const Join = () => {
           <div className="positions-section">
             <h2>Open Positions</h2>
             <div className="positions-list">
-              {positions.map((position) => (
-                <div key={position.id} className="position-card">
+              {positions.map((position, idx) => (
+                <div key={position.id} className={`position-card animate-reveal stagger-${idx + 1}`}>
                   <div className="position-header">
                     <h3>{position.title}</h3>
                     <span className="position-type">{position.type}</span>

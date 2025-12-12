@@ -1,4 +1,5 @@
 import './Showreels.css';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const Showreels = () => {
   const projects = [
@@ -38,18 +39,25 @@ const Showreels = () => {
       <div className="showreels-container">
         <h2 className="showreels-heading">Recent Projects</h2>
         <div className="showreels-grid">
-          {projects.map((project) => (
-            <div key={project.id} className="showreel-card">
-              <div className="showreel-image">
-                {typeof project.image === 'string' && project.image.endsWith('.mp4') ? (
-                  <video src={project.image} muted loop playsInline autoPlay />
-                ) : (
-                  <img src={project.image} alt={project.title} />
-                )}
+          {projects.map((project, idx) => {
+            const { ref, isVisible } = useScrollReveal();
+            return (
+              <div
+                key={project.id}
+                ref={ref}
+                className={`showreel-card ${isVisible ? 'animate-reveal' : ''} stagger-${(idx % 6) + 1}`}
+              >
+                <div className="showreel-image">
+                  {typeof project.image === 'string' && project.image.endsWith('.mp4') ? (
+                    <video src={project.image} muted loop playsInline autoPlay />
+                  ) : (
+                    <img src={project.image} alt={project.title} />
+                  )}
+                </div>
+                <div className="showreel-title">{project.title}</div>
               </div>
-              <div className="showreel-title">{project.title}</div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

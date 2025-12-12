@@ -1,4 +1,5 @@
 import './NewsPage.css';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const News = () => {
   const newsItems = [
@@ -61,6 +62,10 @@ const News = () => {
   const featuredNews = newsItems.find(item => item.featured);
   const regularNews = newsItems.filter(item => !item.featured);
 
+  // Create hooks for all cards at component level
+  const featuredRef = useScrollReveal();
+  const newsRefs = regularNews.map(() => useScrollReveal());
+
   return (
     <div id="news" className="news-page">
       <section className="page-hero">
@@ -73,7 +78,7 @@ const News = () => {
       <section className="news-content">
         <div className="news-container">
           {featuredNews && (
-            <article className="featured-news">
+            <article ref={featuredRef.ref} className={`featured-news ${featuredRef.isVisible ? 'animate-reveal' : ''}`}>
               <div className="featured-news-image">
                 <img src={featuredNews.image} alt={featuredNews.title} />
                 <div className="featured-news-category">{featuredNews.category}</div>
@@ -88,8 +93,12 @@ const News = () => {
           )}
 
           <div className="news-grid">
-            {regularNews.map((item) => (
-              <article key={item.id} className="news-card">
+            {regularNews.map((item, idx) => (
+              <article
+                key={item.id}
+                ref={newsRefs[idx].ref}
+                className={`news-card ${newsRefs[idx].isVisible ? 'animate-reveal' : ''} stagger-${(idx % 6) + 1}`}
+              >
                 <div className="news-card-image">
                   <img src={item.image} alt={item.title} />
                   <div className="news-card-category">{item.category}</div>

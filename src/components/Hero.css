@@ -106,6 +106,48 @@
   border-color: #fff;
 }
 
+/* ===== ENTRANCE ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-content.animate-in {
+  animation: fadeInUp 0.9s ease-out 0.3s both;
+}
+
+.hero-title {
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-bottom-left.animate-in {
+  animation: fadeInUp 0.9s ease-out 0.6s both;
+}
+
+.hero-pagination.animate-in {
+  animation: fadeIn 0.8s ease-out 0.8s both;
+}
+
+/* ===== PARALLAX EFFECT ===== */
+.hero-media.parallax {
+  will-change: transform;
+}
+
 @media (max-width: 1400px) {
   .hero-title { font-size: 6rem; }
 }

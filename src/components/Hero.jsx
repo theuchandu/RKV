@@ -5,6 +5,8 @@ import heroimg2 from '../assets/hero_2img.jpg';
 import heroimg3 from '../assets/hero_3img.jpg';
 
 const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
   const projects = [
     {
       id: 1,
@@ -74,6 +76,15 @@ const Hero = () => {
     return () => clearTimeout(t);
   }, [active, paused, projects.length]);
 
+  // Parallax scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   useEffect(() => {
     // log current media URL for debugging when hero mounts/changes
     console.debug('Hero active media:', activeProject.image);
@@ -85,7 +96,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="hero" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      <div className="hero-media">
+      <div className="hero-media parallax" style={{ transform: `translateY(${scrollY * 0.5}px)` }}>
         {activeProject.image && String(activeProject.image).endsWith('.mp4') && !mediaError ? (
           <video
             className="hero-bg"
@@ -108,18 +119,18 @@ const Hero = () => {
         <div className="hero-overlay" />
       </div>
 
-      <div className="hero-content">
+      <div className="hero-content animate-in">
         <h1 className="hero-title">{activeProject.title}</h1>
       </div>
 
-      <div className="hero-bottom-left">
+      <div className="hero-bottom-left animate-in">
         <p className="hero-subtitle">{activeProject.subtitle}</p>
         {activeProject.cta && (
           <button className="hero-cta">{activeProject.cta}</button>
         )}
       </div>
 
-      <div className="hero-pagination" aria-hidden>
+      <div className="hero-pagination animate-in" aria-hidden>
         {projects.map((p, i) => (
           <button
             key={p.id}
